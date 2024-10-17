@@ -1,0 +1,74 @@
+/* Styles for small devices (default) */
+.categories-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.categories-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.categorie-item {
+  flex: 0 0 50%; /* Each item takes 50% of the container width */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.categorie-btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-family: 'Roboto';
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: none;
+  white-space: normal;
+}
+
+.categorie-btn.selected {
+  padding-bottom: 16px;
+  color: #c92d0e;
+  border-bottom: 3px solid #c92d0e;
+}
+
+.scroll-to-first {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed */
+  transform: translateY(-50%);
+  background: #f1f1f1;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Styles for large devices */
+@media screen and (min-width: 768px) {
+  .categories-container {
+    overflow: visible;
+  }
+
+  .categories-list {
+    transform: none !important;
+  }
+
+  .categorie-item {
+    flex: 1 0 auto; /* Allow items to take up space naturally */
+  }
+
+  .categorie-btn {
+    font-size: 16px;
+  }
+
+  .scroll-to-first {
+    display: none; /* Hide the scroll button */
+  }
+}
